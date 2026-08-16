@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { getServerSession } from '@/actions/auth.actions'
 import { adminDb } from '@/lib/firebase/admin'
-
+import NotesPanel from '@/features/notes/NotesPanel'
 export const metadata: Metadata = {
   title: 'Dashboard',
 }
@@ -35,6 +35,7 @@ export default async function DashboardPage() {
           </div>
         ))}
       </div>
+      <NotesPanel />
     </div>
   )
 }
